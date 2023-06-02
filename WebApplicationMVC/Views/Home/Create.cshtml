@@ -1,0 +1,23 @@
+﻿@model Staff
+
+@{
+    ViewBag.Title = "CreateStaff";
+}
+
+<form asp-controller="Home" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName" class="m-lg-1"></label>
+        <input type="text" asp-for="FirstName" class="form-control" id="firstname" name="FirstName" required>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input type="text" asp-for="LastName" class="form-control" id="lastname" name="LastName" required>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input type="email" asp-for="Email" class="form-control" id="email" name="Email" required>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>
